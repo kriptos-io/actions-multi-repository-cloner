@@ -1,0 +1,17 @@
+name: Actions Multi Repository Cloner
+author: David Nuñez <dnunez@kriptos.io>
+description: A GitHub Actions for cloning multiple kriptos repositories
+inputs:
+  repositories:
+    description: name of repositories
+    required: true
+  token:
+    description: github token, organizational token or personal access token
+    required: true
+runs:
+  using: composite
+  steps:
+    - name: Clone Kriptos Repositories
+      run: |
+        echo ${{ inputs.repositories }}
+      shell: bash
