@@ -13,5 +13,5 @@ runs:
   steps:
     - name: Clone Kriptos Repositories
       run: |
-        echo ${{ inputs.repositories }} | xargs -n1 | xargs -I{} git clone https://${{ inputs.token }}@github.com/${{github.repository_owner}}/{} ${}
+        echo ${{ inputs.repositories }} | xargs -n1 | xargs -I{} git clone https://${{ inputs.token }}@github.com/${{github.repository_owner}}/{} @{}
       shell: bash
